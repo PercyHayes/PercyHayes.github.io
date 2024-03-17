@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title></title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<link rel="stylesheet" href="/application.82b772fb4dca3e014b67448668eed100a62c97192dc4155077b17dfd44d21faf.css" integrity="sha256-grdy&#43;03KPgFLZ0SGaO7RAKYslxktxBVQd7F9/UTSH68=" />
+
+
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="合并两个有序链表 题目描述 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+示例 示例1输入：l1 = [1,2,4], l2 = [1,3,4]输出：[1,1,2,3,4,4]示例2输入：l1 = [], l2 = [0]输出：[0]示例3输入：l1 = [], l2 = []输出：[] 提示：
+两个链表的节点数目范围是 [0, 50] -100 &lt;= Node.val &lt;= 100 l1 和 l2 均按 非递减顺序 排列 题解 代码 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { //int i = 1; ListNode* Newlist = new ListNode();//先开空间给新的链表 ListNode* cur = Newlist; //非递减，认为单调增但允许重复 if(list1 == nullptr){ Newlist = list2; } else if(list2 == nullptr){ Newlist = list1; } else { while(list1 !" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/21_%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/note/" /><meta property="article:section" content="post" />
+
+
+
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="合并两个有序链表 题目描述 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+示例 示例1输入：l1 = [1,2,4], l2 = [1,3,4]输出：[1,1,2,3,4,4]示例2输入：l1 = [], l2 = [0]输出：[0]示例3输入：l1 = [], l2 = []输出：[] 提示：
+两个链表的节点数目范围是 [0, 50] -100 &lt;= Node.val &lt;= 100 l1 和 l2 均按 非递减顺序 排列 题解 代码 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { //int i = 1; ListNode* Newlist = new ListNode();//先开空间给新的链表 ListNode* cur = Newlist; //非递减，认为单调增但允许重复 if(list1 == nullptr){ Newlist = list2; } else if(list2 == nullptr){ Newlist = list1; } else { while(list1 !"/>
+
+    
+    
+<meta name="description" content="" />
+
+
+    
+
+
+
+
+<script>
+      theme = localStorage.getItem('darkmode:color-scheme') || 'system';
+      if (theme == 'system') {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
+
+  <body class="type-post kind-page" data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
+  <div class="container">
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
+    </button>
+    
+    <a class="navbar-brand" href="/">
+      Percy&#39;s Blog</a>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
+    </button>
+
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about">About me</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#recent-posts">Recent Posts</a>
+                </li>
+              
+            
+          
+        
+        
+          <div id="top-navbar-divider"></div>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+          </li>
+        
+        
+        
+            
+              <li class="nav-item">
+                <a class="nav-link" href="https://percyhayes.github.io/files/resume.pdf">Resume</a>
+              </li>
+            
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts/" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/post/introduction/" title="Introduction">Introduction</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/percy1_hu816e78965745113414816ea3a87a6b6e_63022_120x120_fit_q75_box.jpg' alt="Author Image">
+          <h5 class="author-name">Shaowei Gu</h5>
+          <p class="text-muted">Monday, January 1, 1</p>
+        </div>
+        
+        
+        <div class="title">
+          <h1></h1>
+        </div>
+
+        
+
+        
+        <div class="post-content" id="post-content">
+          <h1 id="合并两个有序链表">合并两个有序链表</h1>
+<h2 id="题目描述">题目描述</h2>
+<p>将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</p>
+<h3 id="示例">示例</h3>
+<p><img alt="alt text" src="1709733200985.png"></p>
+<pre tabindex="0"><code>示例1
+输入：l1 = [1,2,4], l2 = [1,3,4]
+输出：[1,1,2,3,4,4]
+
+示例2
+输入：l1 = [], l2 = [0]
+输出：[0]
+
+示例3
+输入：l1 = [], l2 = []
+输出：[]
+</code></pre><p>提示：</p>
+<ul>
+<li>两个链表的节点数目范围是 [0, 50]</li>
+<li>-100 &lt;= Node.val &lt;= 100</li>
+<li>l1 和 l2 均按 非递减顺序 排列</li>
+</ul>
+<h2 id="题解">题解</h2>
+<h3 id="代码">代码</h3>
+<div class="highlight line-numbers"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Definition for singly-linked list.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * struct ListNode {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     int val;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     ListNode *next;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     ListNode() : val(0), next(nullptr) {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     ListNode(int x) : val(x), next(nullptr) {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * };
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    ListNode<span style="color:#f92672">*</span> mergeTwoLists(ListNode<span style="color:#f92672">*</span> list1, ListNode<span style="color:#f92672">*</span> list2) {
+</span></span><span style="display:flex;"><span>         
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//int i = 1;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ListNode<span style="color:#f92672">*</span> Newlist <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode();<span style="color:#75715e">//先开空间给新的链表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ListNode<span style="color:#f92672">*</span> cur <span style="color:#f92672">=</span> Newlist;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//非递减，认为单调增但允许重复
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(list1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">nullptr</span>){
+</span></span><span style="display:flex;"><span>            Newlist <span style="color:#f92672">=</span> list2;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">if</span>(list2  <span style="color:#f92672">==</span> <span style="color:#66d9ef">nullptr</span>){
+</span></span><span style="display:flex;"><span>            Newlist <span style="color:#f92672">=</span> list1;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span>(list1 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nullptr</span> <span style="color:#f92672">&amp;&amp;</span> list2 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nullptr</span>){
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">/*cout&lt;&lt;&#34;cycle: &#34;&lt;&lt;i&lt;&lt;endl;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                i++;*/</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(list1<span style="color:#f92672">-&gt;</span>val <span style="color:#f92672">&gt;=</span> list2<span style="color:#f92672">-&gt;</span>val)<span style="color:#75715e">//链表1中的元素比B中大
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                {  
+</span></span><span style="display:flex;"><span>                    cur<span style="color:#f92672">-&gt;</span>val <span style="color:#f92672">=</span> list2<span style="color:#f92672">-&gt;</span>val; <span style="color:#75715e">//赋值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    <span style="color:#75715e">//cout&lt;&lt;&#34;bigger: &#34;&lt;&lt;cur-&gt;val&lt;&lt;endl;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    list2 <span style="color:#f92672">=</span> list2<span style="color:#f92672">-&gt;</span>next;<span style="color:#75715e">//list指针移动
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    cur<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode();
+</span></span><span style="display:flex;"><span>                    cur <span style="color:#f92672">=</span> cur <span style="color:#f92672">-&gt;</span>next; 
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>{ <span style="color:#75715e">//小于
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    cur <span style="color:#f92672">-&gt;</span> val <span style="color:#f92672">=</span> list1 <span style="color:#f92672">-&gt;</span> val;
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">//cout&lt;&lt;&#34;smaller: &#34;&lt;&lt;cur-&gt;val&lt;&lt;endl;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    list1 <span style="color:#f92672">=</span> list1<span style="color:#f92672">-&gt;</span>next;<span style="color:#75715e">//指针的移动
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    cur<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode();
+</span></span><span style="display:flex;"><span>                    cur <span style="color:#f92672">=</span> cur <span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//将剩下的补充到末尾即可
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            ListNode<span style="color:#f92672">*</span> tmp <span style="color:#f92672">=</span> list1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">nullptr</span><span style="color:#f92672">?</span> list2:list1;
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//cout&lt;&lt;&#34;test: tmp=&#34;&lt;&lt;tmp-&gt;val&lt;&lt;endl;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cur <span style="color:#f92672">-&gt;</span>val <span style="color:#f92672">=</span> tmp<span style="color:#f92672">-&gt;</span>val; <span style="color:#75715e">//元素赋值，直接连接上
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cur<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> tmp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Newlist;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="分析">分析</h3>
+<p>使用比较笨的方法求解：</p>
+<ol>
+<li>首先生成一个新的链表节点NewNode，作为头，并将头节点的地址赋值个cur指针，之后cur连接的也就相当于NewNode的其他节点；</li>
+<li>对于输入的list1和list2，先判断边界条件，如果空就直接输出；</li>
+<li>之后开始对两个链表比较，两个指针置于开头，若list1的值比list2大，则将list2此处的值置于第一位，并将指针向后移动一次，在进行比较，直到其中一个列表到达末尾；</li>
+<li>有一个到达末尾后，另一个可能还剩一个元素或者多个，但此时剩下的元素是有序的，且都比NewNode的小，因此直接将这个未到末尾元素直接赋值给cur指针的元素，并将cur指针的下一个指向未到末尾元素的下一个，相当于直接连接到元list的一部分上，即可完成合并。</li>
+</ol>
+<p>####可能存在的问题</p>
+<ol>
+<li>对代码中的链表头和赋值部分，需要再自习思考原因</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>ListNode<span style="color:#f92672">*</span> Newlist <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode();<span style="color:#75715e">//先开空间给新的链表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>ListNode<span style="color:#f92672">*</span> cur <span style="color:#f92672">=</span> Newlist;
+</span></span></code></pre></div><ol start="2">
+<li>对内存空间的管理，没有del开的空间，是否合理；以及没有对可能异常的处理，需要完善；</li>
+<li>题解中还有递归实现的方法以及更高效简洁的代码，重点看看双指针实现，尝试理解和复现；另外学习递归的方法；</li>
+<li>不同于尾部插入等方法，实现的代码中是直接对当前元素进行赋值，连接下一个指针(避免由于节点的构造方式造成头或尾出现0元素)，但这样每次都需要new一个新节点，是否有更高效的方式(比如只记录指针地址，在两个链表间进行穿插，而不需要每次新造一个链表节点，即cur为前一个，cur-&gt;next直接指向当前较小者的地址)</li>
+</ol>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+          <div class="col-md-6 share-buttons">
+          
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/PercyHayes/PercyHayes.github.io/edit/main/content/post%5c21_%e5%90%88%e5%b9%b6%e4%b8%a4%e4%b8%aa%e6%9c%89%e5%ba%8f%e9%93%be%e8%a1%a8%5cnote.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+  
+</div>
+
+      <hr />
+
+      
+      
+
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"  data-toggle="tooltip" data-placement="left" title="Scroll to top">
+    <i class="fas fa-chevron-circle-up"></i>
+  </a>
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目描述">题目描述</a>
+      <ul>
+        <li><a href="#示例">示例</a></li>
+      </ul>
+    </li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#代码">代码</a></li>
+        <li><a href="#分析">分析</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+    
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#about">About me</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#recent-posts">Recent Posts</a>
+                </li>
+              
+            
+              
+                
+              
+            
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:percyhayes@foxmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>percyhayes@foxmail.com</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://github.com/https://github.com/PercyHayes target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>https://github.com/PercyHayes</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://www.linkedin.com/in/None target="_blank" rel="noopener">
+                  <span><i class="fab fa-linkedin"></i></span> <span>Shaowei Gu</span>
+                </a></li>
+              
+            
+              
+                <li><span><i class="fas fa-phone-alt"></i></span> <span>&#43;86 18813139175</span></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2020 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script src="/application.d775fd014cf05b2d6fe315c1892800143747aaac0876636b7678df6614370a77.js" integrity="sha256-13X9AUzwWy1v4xXBiSgAFDdHqqwIdmNrdnjfZhQ3Cnc=" defer></script>
+
+
+    
+     
+
+    
+</body>
+</html>

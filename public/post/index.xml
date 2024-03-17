@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Percy&#39;s Blog</title>
+    <link>https://hugo-toha.github.io/post/</link>
+    <description>Recent content in Posts on Percy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Mar 2024 16:48:20 +0800</lastBuildDate><atom:link href="https://hugo-toha.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Welcome</title>
+      <link>https://hugo-toha.github.io/post/welcome/</link>
+      <pubDate>Sun, 17 Mar 2024 16:48:20 +0800</pubDate>
+      
+      <guid>https://hugo-toha.github.io/post/welcome/</guid>
+      <description>Greeting! This is an introduction post. My blog will document, but not be limited to the following:
+Papers I&amp;rsquo;ve read, mainly, mainly about artificial intelligence and hardware. Learning of code and algorithms. Records relating to the use of software and computers, including some bugs and useful tips. Some interesting things and so on. $$ a = \frac{b}{c} $$
+$$ b^i = W^o b^i $$
+Block math: $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$</description>
+    </item>
+    
+    <item>
+      <title>[CN]21-合并两个有序链表</title>
+      <link>https://hugo-toha.github.io/post/code_learn/leetcode/leetcode21/</link>
+      <pubDate>Sun, 17 Mar 2024 15:18:23 +0800</pubDate>
+      
+      <guid>https://hugo-toha.github.io/post/code_learn/leetcode/leetcode21/</guid>
+      <description>I、题目描述 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+1. 示例 示例1 输入：l1 = [1,2,4], l2 = [1,3,4] 输出：[1,1,2,3,4,4] 示例2 输入：l1 = [], l2 = [0] 输出：[0] 示例3 输入：l1 = [], l2 = [] 输出：[] 提示：
+两个链表的节点数目范围是 [0, 50] -100 &amp;lt;= Node.val &amp;lt;= 100 l1和 l2均按非递减顺序排列 II、题解 1. 代码 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { //int i = 1; ListNode* Newlist = new ListNode();//先开空间给新的链表 ListNode* cur = Newlist; //非递减，认为单调增但允许重复 if(list1 == nullptr){ Newlist = list2; } else if(list2 == nullptr){ Newlist = list1; } else { while(list1 !</description>
+    </item>
+    
+    
+  </channel>
+</rss>

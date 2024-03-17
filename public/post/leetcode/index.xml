@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Top Category Sample on Percy&#39;s Blog</title>
+    <link>http://localhost:1313/post/leetcode/</link>
+    <description>Recent content in Top Category Sample on Percy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 Jun 2020 08:06:25 +0600</lastBuildDate><atom:link href="http://localhost:1313/post/leetcode/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>test</title>
+      <link>http://localhost:1313/post/leetcode/sub/test/</link>
+      <pubDate>Mon, 08 Jun 2020 08:06:25 +0600</pubDate>
+      
+      <guid>http://localhost:1313/post/leetcode/sub/test/</guid>
+      <description>合并两个有序链表 题目描述 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+示例 示例1 输入：l1 = [1,2,4], l2 = [1,3,4] 输出：[1,1,2,3,4,4]
+示例2 输入：l1 = [], l2 = [0] 输出：[0]
+示例3 输入：l1 = [], l2 = [] 输出：[]
+提示：
+两个链表的节点数目范围是 [0, 50] -100 &amp;lt;= Node.val &amp;lt;= 100 l1 和 l2 均按 非递减顺序 排列 题解 代码 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { //int i = 1; ListNode* Newlist = new ListNode();//先开空间给新的链表 ListNode* cur = Newlist; //非递减，认为单调增但允许重复 if(list1 == nullptr){ Newlist = list2; } else if(list2 == nullptr){ Newlist = list1; } else { while(list1 !</description>
+    </item>
+    
+    
+  </channel>
+</rss>

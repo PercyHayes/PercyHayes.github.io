@@ -1,0 +1,50 @@
+# section information
+section:
+  name: About me
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your resume. this file path should be relative to you "static" directory
+resume: "files/resume.pdf"
+
+
+# a summary about you
+summary: 'I am an undergraduate student at Tsinghua University. I am currently new to scientific research and my research interests include brian-inspired computing, neuromorphic chip and so on. In September, 2024, I will be going to the Institute of Automation, Chinese Academy of Sciences to continue my research(CV will be available soon).'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "percyhayes@foxmail.com"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/PercyHayes/"
+
+badges:
+- type: soft-skill-indicator
+  name: Skill
+  percentage: 60
+  color: blue
+
+- type: soft-skill-indicator
+  name: Hard Working
+  percentage: 75
+  color: green
+
+- type: soft-skill-indicator
+  name: Team Work
+  percentage: 70
+  color: yellow
+
+- type: soft-skill-indicator
+  name: Leadership
+  percentage: 60
+  color: purple
+
+

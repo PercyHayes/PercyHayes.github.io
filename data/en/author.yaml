@@ -1,0 +1,19 @@
+# some information about you
+name: "Shaowei Gu"
+nickname: "Percy"
+
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: "images/author/percy1.jpg"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "percyhayes@foxmail.com"
+  phone: "+86 18813139175"
+  github: https://github.com/PercyHayes
+  linkedin: None
+
+
+# some summary about what you do
+summary:
+- I am an undergraduate student at Department of Precision Instruments, Tsinghua University
+- My research interests include brain-inspired computing, spiking neural networks, neuromorphic chip and computer architecture.
